@@ -2,7 +2,6 @@ package com.algaworks.banco;
 
 public class Conta {
 
-
     private Titular titular;
     private int agencia;
     private int numero;
