@@ -1,3 +1,5 @@
+package com.algaworks.passaporte;
+
 public class PassaporteTeste {
 
     public static void main(String[] args) {
