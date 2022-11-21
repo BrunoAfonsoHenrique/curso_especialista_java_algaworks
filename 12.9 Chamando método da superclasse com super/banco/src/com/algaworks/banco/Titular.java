@@ -1,4 +1,4 @@
-package com.algaworks.conta;
+package com.algaworks.banco;
 
 import java.util.Objects;
 

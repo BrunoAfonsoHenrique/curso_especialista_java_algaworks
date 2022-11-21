@@ -1,4 +1,4 @@
-package com.algaworks.conta;
+package com.algaworks.banco;
 
 public class ContaEspecial extends ContaInvestimento{
 
@@ -31,11 +31,7 @@ public class ContaEspecial extends ContaInvestimento{
 
     @Override
     public void imprimirDemonstrativo() {
-        System.out.println();
-        System.out.printf("Agência: %d%n", getAgencia());
-        System.out.printf("Conta: %d%n", getNumero());
-        System.out.printf("Titular: %s%n", getTitular().getNome());
-        System.out.printf("Saldo: %.2f%n", getSaldo());
+        super.imprimirDemonstrativo();
         System.out.printf("Saldo disponivel: %.2f%n", getSaldoDisponivel());
     }
 

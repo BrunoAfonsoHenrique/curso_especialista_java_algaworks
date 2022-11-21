@@ -1,5 +1,5 @@
-import com.algaworks.conta.ContaInvestimento;
-import com.algaworks.conta.Titular;
+import com.algaworks.banco.ContaInvestimento;
+import com.algaworks.banco.Titular;
 
 public class Principal2 {
 

@@ -1,5 +1,5 @@
-import com.algaworks.conta.ContaEspecial;
-import com.algaworks.conta.Titular;
+import com.algaworks.banco.ContaEspecial;
+import com.algaworks.banco.Titular;
 
 public class Principal3 {
 
