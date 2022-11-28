@@ -31,13 +31,13 @@ public final class ContaEspecial extends ContaInvestimento {
     }
 
     @Override
-    public void imprimirDemonstrativo() {
+    public final void imprimirDemonstrativo() {
         super.imprimirDemonstrativo();
         System.out.printf("Saldo disponível: %.2f%n", getSaldoDisponivel());
     }
 
     @Override
-    protected void validarSaldoParaSaque(double valorSaque) {
+    protected final void validarSaldoParaSaque(double valorSaque) {
         if (getSaldoDisponivel() < valorSaque) {
             throw new RuntimeException("Saldo insuficiente para saque");
         }
@@ -49,7 +49,7 @@ public final class ContaEspecial extends ContaInvestimento {
 
     @Override
     public String toString() {
-        return "Conta Investimento {" +
+        return "ContaEspecial{" +
                 "titular=" + getTitular() +
                 ", agencia=" + getAgencia() +
                 ", numero=" + getNumero() +
@@ -58,4 +58,5 @@ public final class ContaEspecial extends ContaInvestimento {
                 ", limiteChequeEspecial=" + limiteChequeEspecial +
                 '}';
     }
+
 }

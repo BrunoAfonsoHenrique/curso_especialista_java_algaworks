@@ -20,11 +20,12 @@ public class ContaInvestimento extends Conta {
 
     @Override
     public String toString() {
-        return "Conta Investimento {" +
+        return "ContaInvestimento{" +
                 "titular=" + getTitular() +
                 ", agencia=" + getAgencia() +
                 ", numero=" + getNumero() +
                 ", valorTotalRendimentos=" + valorTotalRendimentos +
                 '}';
     }
+
 }

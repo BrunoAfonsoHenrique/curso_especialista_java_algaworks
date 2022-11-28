@@ -1,7 +1,5 @@
 package com.algaworks.banco;
 
-import java.util.Objects;
-
 public class Conta {
 
     private Titular titular;
@@ -27,7 +25,7 @@ public class Conta {
         return numero;
     }
 
-    public double getSaldo() {
+    public final double getSaldo() {
         return saldo;
     }
 
@@ -63,57 +61,13 @@ public class Conta {
         System.out.printf("Saldo: %.2f%n", getSaldo());
     }
 
-//    @Override
-//    public String toString() {
-//        return String.format("Conta(titular = %s, agencia = %d, numero = %d)",
-//                titular.getNome(), agencia,numero);
-//    }
-
-
     @Override
     public String toString() {
         return "Conta{" +
                 "titular=" + titular +
                 ", agencia=" + agencia +
                 ", numero=" + numero +
-                ", saldo=" + saldo +
                 '}';
     }
 
-//    @Override
-//    public boolean equals(Object obj) {
-//
-//        if(this == obj) { // Comprando os objetos
-//            return true;
-//        }
-//        if (obj == null) { // verificação se o objeto está nulo
-//            return false;
-//        }
-//        if(this.getClass() != obj.getClass()) { // Comprando classes diferentes: Conra e Titular
-//            return false;
-//        }
-//        Conta conta = (Conta) obj;
-//        if (this.agencia != conta.getAgencia()) {
-//            return false;
-//        }
-//        if (this.numero != conta.getNumero()) {
-//            return false;
-//        }
-//
-//        return true;
-//    }
-
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Conta conta = (Conta) o;
-        return agencia == conta.agencia && numero == conta.numero;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(agencia, numero);
-    }
 }

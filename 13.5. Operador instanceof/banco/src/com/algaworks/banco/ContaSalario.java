@@ -17,5 +17,4 @@ public class ContaSalario extends Conta {
         this.salarioMensal = salarioMensal;
     }
 
-
 }
