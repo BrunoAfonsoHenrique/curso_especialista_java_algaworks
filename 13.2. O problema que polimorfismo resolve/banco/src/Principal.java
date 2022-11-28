@@ -1,5 +1,6 @@
 import com.algaworks.banco.CaixaEletronico;
 import com.algaworks.banco.ContaEspecial;
+import com.algaworks.banco.ContaSalario;
 import com.algaworks.banco.Titular;
 
 public class Principal {
@@ -15,10 +16,14 @@ public class Principal {
         ContaEspecial conta2 = new ContaEspecial(new Titular("Maria Joana", "98798798700"),
                 2222, 888888, 90);
 
+        ContaSalario conta3 = new ContaSalario(new Titular("Franciso Souza", "44455566677"),
+                3333, 777777, 18000);
+
         conta1.depositar(300);
 
-        caixaEletronico.transferir(conta1, conta2, 50.0);
+        caixaEletronico.transferir(conta1, conta3, 50.0);
         conta1.imprimirDemonstrativo();
-        conta2.imprimirDemonstrativo();
+        conta3.imprimirDemonstrativo();
+
     }
 }
