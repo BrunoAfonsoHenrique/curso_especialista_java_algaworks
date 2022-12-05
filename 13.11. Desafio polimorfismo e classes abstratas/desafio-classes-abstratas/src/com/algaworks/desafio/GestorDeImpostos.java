@@ -1,0 +1,17 @@
+package com.algaworks.desafio;
+
+public class GestorDeImpostos {
+
+    private double valorTotalImpostos;
+
+    public void adicionar(Pessoa pessoa) {
+        double valorImpostosCalculados = pessoa.calcularImpostos();
+        System.out.printf("Impostos devidos de %s: %.2f%n", pessoa.getNome(), valorImpostosCalculados);
+
+        this.valorTotalImpostos += pessoa.calcularImpostos();
+    }
+
+    public double getValorTotalImpostos() {
+        return valorTotalImpostos;
+    }
+}
