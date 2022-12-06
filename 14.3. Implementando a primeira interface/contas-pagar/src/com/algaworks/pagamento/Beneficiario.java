@@ -37,7 +37,7 @@ public class Beneficiario {
     }
 
     public boolean naoPossuiChavePix() {
-        boolean pix = getChavePix() != null || getChavePix().isEmpty();
+        boolean pix = getChavePix() == null || getChavePix().isEmpty();
         return pix;
     }
 
