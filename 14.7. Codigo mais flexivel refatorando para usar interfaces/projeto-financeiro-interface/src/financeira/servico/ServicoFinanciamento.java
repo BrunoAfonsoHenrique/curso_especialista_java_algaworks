@@ -1,6 +1,6 @@
-package com.algaworks.financeira.servico;
+package financeira.servico;
 
-import com.algaworks.financeira.modelo.ClienteFinanciavel;
+import financeira.modelo.ClienteFinanciavel;
 
 public class ServicoFinanciamento {
 

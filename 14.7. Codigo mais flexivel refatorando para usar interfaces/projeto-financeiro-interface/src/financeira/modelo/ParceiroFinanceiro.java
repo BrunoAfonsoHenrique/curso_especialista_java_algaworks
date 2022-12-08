@@ -1,4 +1,4 @@
-package com.algaworks.financeira.modelo;
+package financeira.modelo;
 
 public class ParceiroFinanceiro extends Empresa {
 
