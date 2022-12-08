@@ -14,8 +14,8 @@ public class Principal {
         var funcionario = new Funcionario("João da Silva", 18_000);
 
         servicoFinanciamento.solicitarFinanciamento(funcionario, 90_000);
-//        servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
-//        servicoFinanciamento.solicitarFinanciamento(industria, 600_000);
+        servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
+        servicoFinanciamento.solicitarFinanciamento(industria, 500_000);
     }
 
 }
