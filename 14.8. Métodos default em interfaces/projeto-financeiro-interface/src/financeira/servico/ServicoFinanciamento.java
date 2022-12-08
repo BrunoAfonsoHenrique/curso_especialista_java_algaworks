@@ -7,6 +7,8 @@ public class ServicoFinanciamento {
     public void solicitarFinanciamento(ClienteFinanciavel cliente, double valorSolicitado) {
         double limiteAprovado = cliente.calcularLimiteAprovado();
 
+        double jurosCalculado = cliente.calcularJuros(valorSolicitado);
+
         if (limiteAprovado < valorSolicitado) {
             throw new RuntimeException(String.format(
                     "Financiamento não aprovado. Limite máximo de %.2f", limiteAprovado));
@@ -14,8 +16,8 @@ public class ServicoFinanciamento {
 
         // registraríamos a solicitação do financiamento aqui em alguma classe de persistência de dados,
         // mas por enquanto, apenas imagine isso acontecendo...
-        System.out.printf("DEBUG: Financiamento aprovado. Limite máximo de %.2f%n",
-                limiteAprovado);
+        System.out.printf("DEBUG: Financiamento aprovado de %.2f com juros de %.2f%%. Limite máximo de %.2f%n",
+                valorSolicitado,jurosCalculado, limiteAprovado);
     }
 
     public double consultarLimiteAprovado(ClienteFinanciavel cliente) {

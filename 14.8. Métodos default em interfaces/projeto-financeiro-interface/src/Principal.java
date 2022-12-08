@@ -15,7 +15,7 @@ public class Principal {
 
         servicoFinanciamento.solicitarFinanciamento(funcionario, 90_000);
         servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
-        servicoFinanciamento.solicitarFinanciamento(industria, 500_000);
+        servicoFinanciamento.solicitarFinanciamento(industria, 400_000);
     }
 
 }
