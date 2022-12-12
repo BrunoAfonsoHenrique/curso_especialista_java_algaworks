@@ -5,19 +5,19 @@ public interface ClienteFinanciavel {
     public abstract double calcularLimiteAprovado();
 
     default double calcularJuros(double valorSolicitado) {
-        if (isFinancimentoPequenoValor(valorSolicitado)) {
+        if (ClienteFinanciavel.isFinancimentoPequenoValor(valorSolicitado)) {
             return 1.0;
-        } else if (isFinanciamentoGrandeValor(valorSolicitado)) {
+        } else if (ClienteFinanciavel.isFinanciamentoGrandeValor(valorSolicitado)) {
             return 1.5;
         }
         return 2.0;
     }
 
-    private boolean isFinancimentoPequenoValor(double valorSolicitado) {
+    static boolean isFinancimentoPequenoValor(double valorSolicitado) {
         return valorSolicitado <= 100_000;
     }
 
-    private static boolean isFinanciamentoGrandeValor(double valorSolicitado) {
+    static boolean isFinanciamentoGrandeValor(double valorSolicitado) {
         return valorSolicitado <= 1_000_000;
     }
 

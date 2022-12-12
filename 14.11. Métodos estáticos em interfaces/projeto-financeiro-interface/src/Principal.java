@@ -1,7 +1,4 @@
-import financeira.modelo.Fazenda;
-import financeira.modelo.Funcionario;
-import financeira.modelo.Industria;
-import financeira.modelo.ParceiroFinanceiro;
+import financeira.modelo.*;
 import financeira.servico.ServicoFinanciamento;
 
 public class Principal {
@@ -13,9 +10,11 @@ public class Principal {
         var parceiro = new ParceiroFinanceiro("Capital ABC", 2_000_000);
         Funcionario funcionario = new Funcionario("João da Silva", 18_000);
 
-        servicoFinanciamento.solicitarFinanciamento(funcionario, 90_000);
-        servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
-        servicoFinanciamento.solicitarFinanciamento(industria, 400_000);
+        System.out.println(ClienteFinanciavel.isFinanciamentoGrandeValor(500_000));
+
+//        servicoFinanciamento.solicitarFinanciamento(funcionario, 90_000);
+//        servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
+//        servicoFinanciamento.solicitarFinanciamento(industria, 400_000);
     }
 
 }
