@@ -10,7 +10,9 @@ public class Principal {
         var parceiro = new ParceiroFinanceiro("Capital ABC", 2_000_000);
         Funcionario funcionario = new Funcionario("João da Silva", 18_000);
 
-        System.out.println(ClienteFinanciavel.isFinanciamentoGrandeValor(500_000));
+//        System.out.println(ClienteFinanciavel.isFinanciamentoGrandeValor(500_000));
+
+        System.out.printf("Juros Baixo Risco: %.2f", ClienteFinanciavel.JUROS_BAIXO_RISCO);
 
 //        servicoFinanciamento.solicitarFinanciamento(funcionario, 90_000);
 //        servicoFinanciamento.solicitarFinanciamento(fazenda, 600_000);
