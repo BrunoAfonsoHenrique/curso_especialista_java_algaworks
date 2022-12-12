@@ -9,6 +9,6 @@ public class ServicoPagamentoBonus {
 
         // aqui teria a implementação da logica de pagamento
 
-        System.out.printf("DEBUG: BONUS PAGO N O VALOR DE %.2f%n", valorBonus);
+        System.out.printf("DEBUG: BONUS PAGO NO VALOR DE %.2f%n", valorBonus);
     }
 }
