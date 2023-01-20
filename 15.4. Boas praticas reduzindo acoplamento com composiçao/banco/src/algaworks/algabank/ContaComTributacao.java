@@ -41,6 +41,7 @@ public class ContaComTributacao implements Conta {
     @Override
     public void aplicarEmInvestimento(double valor) {
         contaOriginal.aplicarEmInvestimento(valor);
+        debitarImpostoMovimentacao(valor);
     }
 
 
