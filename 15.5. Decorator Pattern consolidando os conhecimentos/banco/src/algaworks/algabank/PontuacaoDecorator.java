@@ -15,10 +15,10 @@ public class PontuacaoDecorator extends ContaBaseDecorator {
     public int getPontos() {
         return pontos;
     }
-    
+
     @Override
     public void depositar(double valor) {
-        contaOriginal.depositar(valor);
+        getContaOriginal().depositar(valor);
         pontos += valor / 100;
     }
 

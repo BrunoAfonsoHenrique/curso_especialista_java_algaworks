@@ -4,34 +4,38 @@ import algaworks.javabank.Conta;
 
 public class ContaBaseDecorator implements Conta {
 
-    private Conta conta;
+    private Conta contaOriginal;
 
     public ContaBaseDecorator(Conta conta) {
-        this.conta = conta;
+        this.contaOriginal = conta;
+    }
+
+    public Conta getContaOriginal() {
+        return contaOriginal;
     }
 
     @Override
     public double getSaldo() {
-        return conta.getSaldo();
+        return contaOriginal.getSaldo();
     }
 
     @Override
     public void sacar(double valor) {
-        conta.sacar(valor);
+        contaOriginal.sacar(valor);
     }
 
     @Override
     public void depositar(double valor) {
-        conta.depositar(valor);
+        contaOriginal.depositar(valor);
     }
 
     @Override
     public void transferir(Conta conta, double valor) {
-        this.conta.transferir(conta, valor);
+        this.contaOriginal.transferir(conta, valor);
     }
 
     @Override
     public void aplicarEmInvestimento(double valor) {
-        conta.aplicarEmInvestimento(valor);
+        contaOriginal.aplicarEmInvestimento(valor);
     }
 }
