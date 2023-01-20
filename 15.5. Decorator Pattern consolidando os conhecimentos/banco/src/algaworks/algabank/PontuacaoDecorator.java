@@ -2,17 +2,18 @@ package algaworks.algabank;
 
 import algaworks.javabank.Conta;
 
-import java.util.Objects;
+public class PontuacaoDecorator implements Conta {
 
-// Delegação
-public class ContaComTributacao implements Conta {
-
-    public static final double TAXA_IMPOSTO_MOVIMENTACAO = 0.1;
     private Conta contaOriginal;
+    private int pontos;
 
-    public ContaComTributacao(Conta contaOriginal) {
-        Objects.requireNonNull(contaOriginal);
+    public int getPontos() {
+        return pontos;
+    }
+
+    public PontuacaoDecorator(Conta contaOriginal) {
         this.contaOriginal = contaOriginal;
+
     }
 
     @Override
@@ -23,29 +24,21 @@ public class ContaComTributacao implements Conta {
     @Override
     public void sacar(double valor) {
         contaOriginal.sacar(valor);
-        debitarImpostoMovimentacao(valor);
     }
-
 
     @Override
     public void depositar(double valor) {
         contaOriginal.depositar(valor);
+        pontos += valor / 100;
     }
 
     @Override
     public void transferir(Conta conta, double valor) {
         contaOriginal.transferir(conta, valor);
-        debitarImpostoMovimentacao(valor);
     }
 
     @Override
     public void aplicarEmInvestimento(double valor) {
         contaOriginal.aplicarEmInvestimento(valor);
-        debitarImpostoMovimentacao(valor);
-    }
-
-
-    private void debitarImpostoMovimentacao(double valorMovimentacao) {
-        contaOriginal.sacar(valorMovimentacao * TAXA_IMPOSTO_MOVIMENTACAO);
     }
 }
