@@ -38,4 +38,10 @@ public class AuditoriaDecorator extends ContaBaseDecorator {
         quantidadeOperacoes++;
         getContaOriginal().aplicarEmInvestimento(valor);
     }
+
+    @Override
+    public void imprimirSaldo() {
+        quantidadeOperacoes++;
+        getContaOriginal().imprimirSaldo();
+    }
 }

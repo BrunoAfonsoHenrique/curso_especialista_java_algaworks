@@ -38,4 +38,9 @@ public class ContaBaseDecorator implements Conta {
     public void aplicarEmInvestimento(double valor) {
         contaOriginal.aplicarEmInvestimento(valor);
     }
+
+    @Override
+    public void imprimirSaldo() {
+        contaOriginal.imprimirSaldo();
+    }
 }
