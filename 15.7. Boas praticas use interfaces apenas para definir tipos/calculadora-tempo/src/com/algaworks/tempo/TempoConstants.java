@@ -1,6 +1,9 @@
 package com.algaworks.tempo;
 
-public interface TempoConstants {
+public final class TempoConstants {
+
+    private TempoConstants() {
+    }
 
     public static final int SEGUNDOS_POR_MINUTO = 60;
 
