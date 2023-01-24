@@ -22,8 +22,15 @@ public class Main {
     }
 
     public static void efetuarBaixaEstoque(Produto produto, int quantidade) {
-        produto.retirarEstoque(quantidade);
-        System.out.printf("%d unidades retiradas do estoque. Estoque atual %d%n ",
-                quantidade, produto.getQuantidadeEstoque());
+        try {
+            produto.retirarEstoque(quantidade);
+            System.out.printf("%d unidades retiradas do estoque. Estoque atual %d%n ",
+                    quantidade, produto.getQuantidadeEstoque());
+        }
+        catch (IllegalArgumentException e) { // e -> nome da variavel que vai referenciar o objeto da excecao
+            // instruções para tratamento adequado da excecao
+            System.out.println("Erro ao efetuar baixa no estoque: " + e.getMessage());
+        }
+
     }
 }
