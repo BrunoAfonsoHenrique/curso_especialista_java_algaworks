@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Produto produto = new Produto(null);
+        Produto produto = new Produto("Iphone");
         produto.ativar();
         produto.adicionarEstoque(20);
 
@@ -13,7 +13,7 @@ public class Main {
 
     public static void comprar(Produto produto) {
         Scanner sc = new Scanner(System.in);
-        System.out.printf("Quanidade: ");
+        System.out.printf("Quantidade: ");
         int quantidade = sc.nextInt();
 
         efetuarBaixaEstoque(produto, quantidade);
