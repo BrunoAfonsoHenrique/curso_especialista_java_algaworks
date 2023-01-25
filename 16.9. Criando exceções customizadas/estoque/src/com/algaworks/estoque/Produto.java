@@ -18,7 +18,6 @@ public class Produto {
 
     public void setNome(String nome) {
         if (nome == null) {
-            //throw new NullPointerException("NOME DEVE SER INFORMADO");
             Objects.requireNonNull(nome, "NOME DEVE SER INFORMADO");
         }
         this.nome = nome;
@@ -54,16 +53,15 @@ public class Produto {
 
     public void retirarEstoque(int quantidade) {
         if (quantidade < 0) {
-//          IllegalArgumentException excecao = new IllegalArgumentException("Quantidade não pode ser negativa para retirada do estoque");
             throw new IllegalArgumentException("QUANTIDADE NÃO PODE SER " +
                     "NEGATIVA PARA RETIRADA DO ESTOQUE\n");
         }
         if (isInativo()) {
-            throw new IllegalStateException("RETIRADA NO ESTOQUE NAO PODE SER REALIZADA EM PRODUTOS INATIVOS");
+            throw new ProdutoInativoException("RETIRADA NO ESTOQUE NAO PODE SER REALIZADA EM PRODUTOS INATIVOS");
         }
 
         if (this.quantidadeEstoque - quantidade < 0) {
-            throw new IllegalArgumentException("QUANTIDADE INVALIDA PORQUE O ESTOQUE VAI FICAR NEGATIVO");
+            throw new ProdutoSemEstoqueException("QUANTIDADE INVALIDA PORQUE O ESTOQUE VAI FICAR NEGATIVO");
         }
 
         this.quantidadeEstoque -= quantidade;
