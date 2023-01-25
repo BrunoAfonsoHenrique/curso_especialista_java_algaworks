@@ -1,0 +1,42 @@
+Checked - exceções verificados
+Uncheked - exceções não verificadas
+
+--------------------------------------------------------------
+
+Uncheked - exceções que não obrigam a captura dessa exceção
+em um bloco try...catch
+
+Sempre que uma exceção herdar da classe RuntimeException
+você nao é obrigado a trata-lá e ela é uma Uncheked
+
+EX: IllegalArgumentException
+IllegalStateException
+NullPointerException
+
+--------------------------------------------------------------
+
+Checked (Excecao verificada) - você é obrigado a captura e 
+trata-lá ou propagar para o método chamador
+se não fizer o código nem compila
+
+
+São todas as classes que herdam de exception mas não herdam
+de RuntimeException
+
+Regra de negócio
+-------------------------------------------------------------
+
+Error (Herda de Throwable)
+
+São erros criticos lançados pela JVM que impedem a execução
+do programa. O programa é encerrado.
+
+Não precisam e não devem ser capturados pelo programa
+
+Um erro é irrecuperável.
+
+
+
+
+
+
