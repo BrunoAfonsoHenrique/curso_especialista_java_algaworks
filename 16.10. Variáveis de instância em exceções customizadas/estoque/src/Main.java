@@ -30,11 +30,6 @@ public class Main {
             } catch (IllegalArgumentException e) {
                 System.out.println("Erro: " + e.getMessage());
 
-            } catch (ProdutoSemEstoqueException e) {
-                System.out.printf("Erro na compra: %s. Estoque disponivel: %d. Estoque necessario: %d%n",
-                        e.getMessage(), e.getEstoqueDisponivel(), e.getEstoqueNecessario());
- //               System.out.println("Erro: " + e.getMessage());
-
             } catch (ProdutoInativoException e) {
                 System.out.println("Erro: " + e.getMessage());
                 System.out.printf("Deseja ativa o produto? ");
@@ -46,12 +41,15 @@ public class Main {
                     System.out.printf("OK. Compra não pode ser realizada");
                     break;
                 }
+            } catch (ProdutoSemEstoqueException e) {
+                System.out.printf("Erro na compra: %s. Estoque disponivel: %d. Estoque necessario: %d%n",
+                        e.getMessage(), e.getEstoqueDisponivel(), e.getEstoqueNecessario());
             }
         } while(true);
 
     }
 
-    public static void efetuarBaixaEstoque(Produto produto, int quantidade) {
+    public static void efetuarBaixaEstoque(Produto produto, int quantidade) throws ProdutoSemEstoqueException {
         produto.retirarEstoque(quantidade);
         System.out.printf("%d unidades retiradas do estoque. Estoque atual %d%n ",
                 quantidade, produto.getQuantidadeEstoque());

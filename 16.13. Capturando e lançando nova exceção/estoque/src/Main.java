@@ -4,6 +4,7 @@ import estoque.*;
 
 import java.util.Scanner;
 
+
 public class Main {
     public static void main(String[] args) {
         Produto produto = new Produto("Iphone");
@@ -27,7 +28,6 @@ public class Main {
                 break;
             } catch (BaixaEstoqueException e) {
                 System.out.println("Erro: " + e.getMessage());
-                e.printStackTrace();
 
             }
         } while(true);
