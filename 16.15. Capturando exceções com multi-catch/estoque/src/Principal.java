@@ -1,6 +1,7 @@
 import estoque.BaixaEstoqueException;
 import estoque.Produto;
 import estoque.ProdutoException;
+import estoque.ProdutoSemEstoqueException;
 
 import java.util.Scanner;
 
@@ -27,7 +28,7 @@ public class Principal {
                 break;
             } catch (BaixaEstoqueException e) {
                 System.out.println("Erro: " + e.getCause().getMessage());
-                e.printStackTrace();
+               // e.printStackTrace();
 
             }
         } while(true);
@@ -39,10 +40,7 @@ public class Principal {
             produto.retirarEstoque(quantidade);
             System.out.printf("%d unidades retiradas do estoque. Estoque atual %d%n ",
                     quantidade, produto.getQuantidadeEstoque());
-        } catch (IllegalArgumentException e) {
-            throw new BaixaEstoqueException("Erro ao realizar baixa no estoque", e);
-        }
-        catch (ProdutoException e) {
+        } catch (IllegalArgumentException | ProdutoException e) {
             throw new BaixaEstoqueException("Erro ao realizar baixa no estoque", e);
         }
 
