@@ -26,7 +26,7 @@ public class Main {
 
                 break;
             } catch (BaixaEstoqueException e) {
-                System.out.println("Erro: " + e.getMessage());
+                System.out.println("Erro: " + e.getCause().getMessage());
                 e.printStackTrace();
 
             }
@@ -40,10 +40,10 @@ public class Main {
             System.out.printf("%d unidades retiradas do estoque. Estoque atual %d%n ",
                     quantidade, produto.getQuantidadeEstoque());
         } catch (IllegalArgumentException e) {
-            throw new BaixaEstoqueException("Erro ao realizar baixa no estoque");
+            throw new BaixaEstoqueException("Erro ao realizar baixa no estoque", e);
         }
         catch (ProdutoException e) {
-            throw new BaixaEstoqueException("Erro ao realizar baixa no estoque");
+            throw new BaixaEstoqueException("Erro ao realizar baixa no estoque", e);
         }
 
     }
