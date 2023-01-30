@@ -1,4 +1,4 @@
-import com.algaworks.banco.ContaCorrente;
+import com.algaworks.banco.*;
 
 public class Principal3 {
 
@@ -9,8 +9,24 @@ public class Principal3 {
         conta1.ativar();
         conta2.ativar();
 
-        conta1.depositar(1_000);
-        conta1.transferir(conta2, 1_200);
+        try {
+            conta1.depositar(1_000);
+        } catch (ContaInativaException e) {
+            System.out.println("Erro: " + e.getMessage());
+        } catch (ValorDepositoNegativoException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+        try {
+            conta1.transferir(conta2, 1_200);
+        } catch (ContaInativaException e) {
+            System.out.println("Erro: " + e.getMessage());
+        } catch (ValorDepositoNegativoException e) {
+            System.out.println("Erro: " + e.getMessage());
+        } catch (ContaSemSaldoException e) {
+            System.out.println("Erro: " + e.getMessage());
+        } catch (ValorNegativoException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
 
         System.out.printf("Saldo da conta 1: %.2f%n", conta1.getSaldo());
         System.out.printf("Saldo da conta 2: %.2f%n", conta2.getSaldo());

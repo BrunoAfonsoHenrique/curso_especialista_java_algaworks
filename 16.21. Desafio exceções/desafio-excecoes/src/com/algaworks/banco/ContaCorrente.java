@@ -34,45 +34,39 @@ public class ContaCorrente {
         this.ativa = false;
     }
 
-    public boolean sacar(double valor) {
+    public boolean sacar(double valor) throws ContaInativaException, ValorNegativoException, ContaSemSaldoException {
         if (valor <= 0) {
-            System.out.println("Valor de saque deve ser maior que 0");
-            return false;
+            throw new ValorNegativoException("Valor de saque deve ser maior que 0");
         }
 
         if (valor > this.saldo) {
-            System.out.println("Conta sem saldo");
-            return false;
+            throw new ContaSemSaldoException("Conta sem saldo");
         }
 
         if (isInativa()) {
-            System.out.println("Conta inativa");
-            return false;
+            throw new ContaInativaException("Conta não pode estar inativa pararealizar transações");
         }
 
         this.saldo -= valor;
         return true;
     }
 
-    public boolean depositar(double valor) {
+    public boolean depositar(double valor) throws ContaInativaException, ValorDepositoNegativoException {
         if (valor <= 0) {
-            System.out.println("Valor de depósito deve ser maior que 0");
-            return false;
+            throw new ValorDepositoNegativoException("Valor do deposito não pode ser negatvo");
         }
 
         if (isInativa()) {
-            System.out.println("Conta inativa");
-            return false;
+            throw new ContaInativaException("Conta não pode estar inativa pararealizar transações");
         }
 
         this.saldo += valor;
         return true;
     }
 
-    public boolean transferir(ContaCorrente contaDestino, double valor) {
+    public boolean transferir(ContaCorrente contaDestino, double valor) throws ContaInativaException, ValorDepositoNegativoException, ContaSemSaldoException, ValorNegativoException {
         if (contaDestino.isInativa()) {
-            System.out.println("Conta de destino está inativa");
-            return false;
+            throw new ContaInativaException("Conta não pode estar inativa pararealizar transações");
         }
 
         if (sacar(valor)) {
@@ -82,4 +76,5 @@ public class ContaCorrente {
 
         return false;
     }
+
 }
