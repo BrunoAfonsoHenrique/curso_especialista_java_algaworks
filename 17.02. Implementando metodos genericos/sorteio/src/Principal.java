@@ -5,7 +5,7 @@ public class Principal {
 
     public static void main(String[] args) {
         String[] nomes = {"Joao, jose, maria"};
-        String nomeSorteado =  Sorteador.<String>sortear(nomes);
+        String nomeSorteado =  Sorteador.sortear(nomes);
 
         Cliente[] clientes = {
                 new Cliente("Supermercado Pague e Leve", 2_000_000),
