@@ -11,7 +11,7 @@ public class Principal {
 //        clientes.add("José");
 
         double totalFaturamento = 0d;
-        
+
 
         for (Cliente cliente : clientes) {
             //           Cliente cliente = (Cliente) objeto;
