@@ -1,5 +1,3 @@
-
-
 import com.algaworks.crm.Cliente;
 
 import java.util.ArrayList;
@@ -13,9 +11,10 @@ public class Principal {
 //        clientes.add("José");
 
         double totalFaturamento = 0d;
+        
 
         for (Cliente cliente : clientes) {
-            //Cliente cliente = (Cliente) object;
+            //           Cliente cliente = (Cliente) objeto;
             totalFaturamento += cliente.getFaturamentoMensal();
         }
 
