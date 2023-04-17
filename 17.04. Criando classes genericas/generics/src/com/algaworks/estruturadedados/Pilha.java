@@ -1,8 +1,10 @@
 package com.algaworks.estruturadedados;
 
+import com.algaworks.loja.Produto;
+
 import java.util.Arrays;
 
-public class Pilha<T> {
+public class Pilha<T extends Produto> {
 
     private T[] itens;
 

@@ -5,6 +5,7 @@ import com.algaworks.loja.Produto;
 
 public class Principal {
 
+ //   public static void main(String[] args) {
     public static void main(String[] args) {
         Pilha<Produto> pilha = new Pilha<Produto>();
 //        pilha.colocar("A");
