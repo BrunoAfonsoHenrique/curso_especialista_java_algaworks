@@ -33,6 +33,7 @@ public class Principal {
                 System.out.printf("%s (%s) -> %.2f%n", h.getNome(),
                         h.getCidade(), h.getPrecoDiaria());
             }
+            
         }
 
 
