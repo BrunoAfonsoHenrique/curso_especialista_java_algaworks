@@ -14,7 +14,7 @@ public class Principal {
         cadastro.adicionar("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
-        cadastro.adicionar("Vila Selvagem", "Fortim/CE", 1400);
+        cadastro.adicionar("Vila Selvagem", "Fortaleza/CE", 1400);
 
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
         imprimirHoteis(hoteis);
