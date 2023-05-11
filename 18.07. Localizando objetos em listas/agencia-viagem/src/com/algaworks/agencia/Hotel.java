@@ -5,15 +5,13 @@ import java.util.Objects;
 public class Hotel {
 
     private String nome;
-
     private String cidade;
-
     private double precoDiaria;
 
     public Hotel(String nome, String cidade, double precoDiaria) {
-        this.nome = nome;
-        this.cidade = cidade;
-        this.precoDiaria = precoDiaria;
+        setNome(nome);
+        setCidade(cidade);
+        setPrecoDiaria(precoDiaria);
     }
 
     public String getNome() {
@@ -21,6 +19,7 @@ public class Hotel {
     }
 
     public void setNome(String nome) {
+        Objects.requireNonNull(nome);
         this.nome = nome;
     }
 
@@ -38,8 +37,9 @@ public class Hotel {
 
     public void setPrecoDiaria(double precoDiaria) {
         if (precoDiaria < 0) {
-            throw new IllegalArgumentException("Preço da diaria não pode ser negativo");
+            throw new IllegalArgumentException("Preço da diária não pode ser negativo");
         }
+
         this.precoDiaria = precoDiaria;
     }
 
@@ -56,12 +56,18 @@ public class Hotel {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
+
         Hotel hotel = (Hotel) o;
-        return nome.equals(hotel.nome) && cidade.equals(hotel.cidade);
+
+        if (!nome.equals(hotel.nome)) return false;
+        return cidade.equals(hotel.cidade);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, cidade);
+        int result = nome.hashCode();
+        result = 31 * result + cidade.hashCode();
+        return result;
     }
+
 }

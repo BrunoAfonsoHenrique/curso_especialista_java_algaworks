@@ -6,7 +6,6 @@ import java.util.ArrayList;
 public class Principal {
 
     public static void main(String[] args) {
-
         CadastroHotel cadastro = new CadastroHotel();
         cadastro.adicionar("Jaguaribe Lodge", "Fortim/CE", 1300);
         cadastro.adicionar("Vila Selvagem", "Fortim/CE", 1400);
@@ -14,11 +13,16 @@ public class Principal {
         cadastro.adicionar("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
-        cadastro.adicionar("Vila Selvagem", "Fortaleza/CE", 1400);
+        cadastro.adicionar("Vila Selvagem", "Fortim/CE", 1400);
 
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
-        imprimirHoteis(hoteis);
+//        int indice = hoteis.indexOf(new Hotel("Vila Selvagem", "Fortim/CE", 0));
+        int indice = hoteis.lastIndexOf(new Hotel("Vila Selvagem", "Fortim/CE", 0));
+        System.out.println(indice);
 
+//        System.out.println(hoteis.get(indice));
+
+//        imprimirHoteis(hoteis);
     }
 
     private static void imprimirHoteis(ArrayList<Hotel> hoteis) {
@@ -26,17 +30,7 @@ public class Principal {
             Hotel hotel = hoteis.get(i);
             System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
                     hotel.getCidade(), hotel.getPrecoDiaria());
-
         }
     }
 
-//    private static void imprimirHoteis (ArrayList < Hotel > hoteis) {
-//        for (Hotel h : hoteis) {
-//            System.out.printf("%s (%s) -> %.2f%n", h.getNome(),
-//                    h.getCidade(), h.getPrecoDiaria());
-//        }
-//
-//    }
-
 }
-
