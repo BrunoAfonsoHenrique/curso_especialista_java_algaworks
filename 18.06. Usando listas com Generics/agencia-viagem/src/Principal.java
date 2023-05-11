@@ -15,18 +15,26 @@ public class Principal {
         cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
 
-        ArrayList hoteis = cadastro.obterTodos();
+        ArrayList<Hotel> hoteis = cadastro.obterTodos();
         imprimirHoteis(hoteis);
 
     }
 
-    private static void imprimirHoteis(ArrayList hoteis) {
-        for (int i = 0; i < hoteis.size(); i++) {
-            Hotel hotel = (Hotel) hoteis.get(i);
-            System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
-                    hotel.getCidade(), hotel.getPrecoDiaria());
+//    private static void imprimirHoteis(ArrayList<Hotel> hoteis) {
+//        for (int i = 0; i < hoteis.size(); i++) {
+//            Hotel hotel = hoteis.get(i);
+//            System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
+//                    hotel.getCidade(), hotel.getPrecoDiaria());
+//
+//        }
 
+        private static void imprimirHoteis (ArrayList < Hotel > hoteis) {
+            for (Hotel h : hoteis) {
+                System.out.printf("%s (%s) -> %.2f%n", h.getNome(),
+                        h.getCidade(), h.getPrecoDiaria());
+            }
         }
-    }
+
 
 }
+
