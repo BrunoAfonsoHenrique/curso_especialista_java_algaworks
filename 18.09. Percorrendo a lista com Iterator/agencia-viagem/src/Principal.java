@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Principal {
 
@@ -10,23 +11,27 @@ public class Principal {
         cadastro.adicionar("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
-//        cadastro.remover(new Hotel("Vila Selvagem", "Fortim/CE", 1400));
-        cadastro.removerPorCidade("Fortim/CE");
-
-        cadastro.removerTodos();
-
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
-//        hoteis.set(3, new Hotel("Teste", "teste", 1)); substitui o objeto
-//        hoteis.add(3, new Hotel("Teste", "teste", 1)); // adiciona o objeto
         imprimirHoteis(hoteis);
     }
 
     private static void imprimirHoteis(ArrayList<Hotel> hoteis) {
-        for (int i = 0; i < hoteis.size(); i++) {
-            Hotel hotel = hoteis.get(i);
+
+        Iterator<Hotel> hotelIterator = hoteis.iterator();
+//        System.out.println(hotelIterator.next());
+
+        while (hotelIterator.hasNext()) {
+            Hotel hotel = hotelIterator.next();
             System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
                     hotel.getCidade(), hotel.getPrecoDiaria());
         }
+
+
+//        for (int i = 0; i < hoteis.size(); i++) {
+//            Hotel hotel = hoteis.get(i);
+//            System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
+//                    hotel.getCidade(), hotel.getPrecoDiaria());
+//        }
     }
 
 }
