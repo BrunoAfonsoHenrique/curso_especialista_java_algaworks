@@ -15,7 +15,8 @@ public class CadastroHotel {
             throw new HotelJaExistenteException("Hotel já foi adicionado");
         }
 
-        hoteis.add(0, hotel);
+//        hoteis.add(0, hotel);
+        hoteis.add(hotel);
     }
 
     public ArrayList<Hotel> obterTodos() {

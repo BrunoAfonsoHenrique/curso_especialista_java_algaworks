@@ -13,7 +13,10 @@ public class Principal {
         cadastro.adicionar("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
+
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
+//        hoteis.set(3, new Hotel("Teste", "teste", 1)); substitui o objeto
+        hoteis.add(3, new Hotel("Teste", "teste", 1)); // adiciona o objeto
         imprimirHoteis(hoteis);
     }
 
