@@ -2,6 +2,7 @@ import com.algaworks.agencia.exception.HotelJaExistenteException;
 import com.algaworks.agencia.exception.HotelNaoEncontradoException;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class CadastroHotel {
 
@@ -32,16 +33,27 @@ public class CadastroHotel {
 //        }
 //    }
 
-    public void removerPorCidade(String cidade) {
-        ArrayList<Hotel> hoteisParaRemocao = new ArrayList<>();
-        for (int i = 0; i < hoteis.size(); i++) {
-            Hotel hotel  = hoteis.get(i);
-            if (hotel.getCidade().equals(cidade)) {
-                hoteisParaRemocao.add(hotel);
-            }
-        }
+//    public void removerPorCidade(String cidade) {
+//        ArrayList<Hotel> hoteisParaRemocao = new ArrayList<>();
+//        for (int i = 0; i < hoteis.size(); i++) {
+//            Hotel hotel  = hoteis.get(i);
+//            if (hotel.getCidade().equals(cidade)) {
+//                hoteisParaRemocao.add(hotel);
+//            }
+//        }
+//
+//        hoteis.removeAll(hoteisParaRemocao);
+//    }
 
-        hoteis.removeAll(hoteisParaRemocao);
+    public void removerPorCidade(String cidade) {
+        Iterator<Hotel> hotelIterator = hoteis.iterator();
+        while (hotelIterator.hasNext()) {
+            Hotel hotel = hotelIterator.next();
+            if (hotel.getCidade().equals(cidade)) {
+                hotelIterator.remove(); // remove o ultimo elemento que o hotelIterator.next() retornou
+            }
+
+        }
     }
 
     public void remover(Hotel hotel) {
