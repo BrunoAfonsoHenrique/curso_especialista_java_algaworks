@@ -2,6 +2,7 @@ import agencia.CadastroHotel;
 import agencia.Hotel;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
 public class Principal {
 
@@ -13,11 +14,11 @@ public class Principal {
         cadastro.adicionar("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionar("Mercure", "Uberlândia/MG", 400);
 
-        ArrayList<Hotel> hoteis = cadastro.obterTodos();
+        LinkedList<Hotel> hoteis = cadastro.obterTodos();
         imprimirHoteis(hoteis);
     }
 
-    private static void imprimirHoteis(ArrayList<Hotel> hoteis) {
+    private static void imprimirHoteis(LinkedList<Hotel> hoteis) {
 
         for (Hotel hotel : hoteis) {
             System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
