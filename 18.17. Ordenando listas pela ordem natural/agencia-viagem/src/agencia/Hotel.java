@@ -56,25 +56,23 @@ public class Hotel implements Comparable<Hotel> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-
         Hotel hotel = (Hotel) o;
-
-        if (!nome.equals(hotel.nome)) return false;
-        return cidade.equals(hotel.cidade);
+        return nome.equals(hotel.nome);
     }
 
     @Override
     public int hashCode() {
-        int result = nome.hashCode();
-        result = 31 * result + cidade.hashCode();
-        return result;
+        return Objects.hash(nome);
     }
-
 
     @Override
     public int compareTo(Hotel hotel) {
-        return Double.valueOf(getPrecoDiaria())
-                .compareTo(Double.valueOf(hotel.getPrecoDiaria()));
+        return getNome().compareTo(hotel.getNome());
+
+//        return Double.valueOf(getPrecoDiaria())
+//                .compareTo(Double.valueOf(hotel.getPrecoDiaria()));
+
+
 //        if (this.getPrecoDiaria() < hotel.getPrecoDiaria()) {
 //            return -1;
 //        } else if (this.getPrecoDiaria() > hotel.getPrecoDiaria()) {
