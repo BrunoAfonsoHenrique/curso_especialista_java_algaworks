@@ -59,7 +59,8 @@ public class CadastroHotel {
     }
 
     public void ordenarPorPrco() {
-        Collections.sort(hoteis, new PrecoHotelComparator());
+        //Collections.sort(hoteis, new PrecoHotelComparator());
+        hoteis.sort(new PrecoHotelComparator());
     }
 
 }
