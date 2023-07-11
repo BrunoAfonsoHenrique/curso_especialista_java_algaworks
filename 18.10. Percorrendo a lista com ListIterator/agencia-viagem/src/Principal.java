@@ -2,7 +2,6 @@ import agencia.CadastroHotel;
 import agencia.Hotel;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.ListIterator;
 
 public class Principal {
