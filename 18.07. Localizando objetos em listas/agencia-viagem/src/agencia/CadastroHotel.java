@@ -8,9 +8,9 @@ public class CadastroHotel {
 
     public void adicionarNovoHotel(String nome, String cidade, double precoDiaria)  {
         Hotel hotel = new Hotel(nome, cidade, precoDiaria);
-        if (hoteis.contains(hotel)) {
-            throw new HotelJaExistenteException("HOTEL JA FOI ADICIONADO");
-        }
+//        if (hoteis.contains(hotel)) {
+//            throw new HotelJaExistenteException("HOTEL JA FOI ADICIONADO");
+//        }
 
         hoteis.add(hotel);
 
