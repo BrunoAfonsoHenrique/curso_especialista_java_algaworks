@@ -17,7 +17,6 @@ public class Principal {
 
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
         imprimirHoteis(hoteis);
-
     }
 
     private static void imprimirHoteis(ArrayList<Hotel> hoteis) {
