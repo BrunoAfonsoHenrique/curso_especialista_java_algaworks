@@ -10,7 +10,7 @@ public class CadastroHotel {
         hoteis.add(new Hotel(nome, cidade, precoDiaria));
     }
 
-    public ArrayList obterTodos() {
+    public ArrayList<Hotel> obterTodos() {
         return hoteis;
     }
 }

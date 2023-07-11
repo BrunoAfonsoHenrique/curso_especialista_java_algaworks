@@ -24,5 +24,13 @@ public class Principal {
             Hotel hotel = hoteis.get(i);
             System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(), hotel.getCidade(), hotel.getPrecoDiaria());
         }
+
+        System.out.println("-------------------------------------------------");
+
+        for (Hotel listaHoteis : hoteis) {
+            System.out.printf("%s (%s) -> %.2f%n", listaHoteis.getNome(),
+                    listaHoteis.getCidade(),
+                    listaHoteis.getPrecoDiaria());
+        }
     }
 }
