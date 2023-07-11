@@ -14,14 +14,13 @@ public class Principal {
         cadastro.adicionarNovoHotel("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionarNovoHotel("Mercure", "Uberlândia/MG", 400);
 
-        cadastro.adicionarNovoHotel("Vila Selvagem", "Fortim/CE", 1400);
+//        cadastro.removerPorCidade("Fortim/CE");
+        cadastro.remover(new Hotel("Vila Selvagem", "Fortim/CE", 1400));
 
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
-//        int indice = hoteis.indexOf(new Hotel("Vila Selvagem", "Fortim/CE", 1400));
-        int indice = hoteis.lastIndexOf(new Hotel("Vila Selvagem", "Fortim/CE", 1400));
-        System.out.println("Indice: " + indice);
-
-//        imprimirHoteis(hoteis);
+//        hoteis.set(3, new Hotel("Teste", "Teste", 0));
+//        hoteis.add(3, new Hotel("Teste", "Teste", 0));
+        imprimirHoteis(hoteis);
 
     }
 
