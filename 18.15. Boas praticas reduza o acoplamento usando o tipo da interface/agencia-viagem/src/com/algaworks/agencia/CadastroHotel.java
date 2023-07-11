@@ -1,13 +1,10 @@
 package com.algaworks.agencia;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Vector;
+import java.util.*;
 
 public class CadastroHotel {
 
-    private final List<Hotel> hoteis = new ArrayList<>();
+    private final List<Hotel> hoteis = new LinkedList<>();
 
     public void adicionarNovoHotel(String nome, String cidade, double precoDiaria)  {
         Hotel hotel = new Hotel(nome, cidade, precoDiaria);
