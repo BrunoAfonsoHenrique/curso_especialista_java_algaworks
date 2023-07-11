@@ -27,6 +27,6 @@ public class Principal {
             System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
                     hotel.getCidade(), hotel.getPrecoDiaria());
         }
-        
+
     }
 }
