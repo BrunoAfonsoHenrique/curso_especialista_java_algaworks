@@ -2,11 +2,12 @@ package com.algaworks.agencia;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Vector;
 
 public class CadastroHotel {
 
-    private final ArrayList<Hotel> hoteis = new ArrayList<>();
+    private final List<Hotel> hoteis = new ArrayList<>();
 
     public void adicionarNovoHotel(String nome, String cidade, double precoDiaria)  {
         Hotel hotel = new Hotel(nome, cidade, precoDiaria);
@@ -19,7 +20,7 @@ public class CadastroHotel {
 
     }
 
-    public ArrayList<Hotel> obterTodos() {
+    public List<Hotel> obterTodos() {
         return hoteis;
     }
 

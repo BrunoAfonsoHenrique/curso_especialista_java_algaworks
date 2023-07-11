@@ -2,6 +2,7 @@ import com.algaworks.agencia.CadastroHotel;
 import com.algaworks.agencia.Hotel;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Vector;
 
 public class Principal {
@@ -15,12 +16,12 @@ public class Principal {
         cadastro.adicionarNovoHotel("Tivoli Ecoresort", "Praia do Forte/BA", 2000);
         cadastro.adicionarNovoHotel("Mercure", "Uberlândia/MG", 400);
 
-        ArrayList<Hotel> hoteis = cadastro.obterTodos();
+        List<Hotel> hoteis = cadastro.obterTodos();
         imprimirHoteis(hoteis);
     }
 
 
-    private static void imprimirHoteis(ArrayList<Hotel> hoteis) {
+    private static void imprimirHoteis(List<Hotel> hoteis) {
 
         for (Hotel hotel : hoteis) {
             System.out.printf("%s (%s) -> %.2f%n", hotel.getNome(),
