@@ -15,7 +15,8 @@ public class Principal {
         cadastro.adicionarNovoHotel("Mercure", "Uberlândia/MG", 400);
 
 //        cadastro.removerPorCidade("Fortim/CE");
-        cadastro.remover(new Hotel("Vila Selvagem", "Fortim/CE", 1400));
+//        cadastro.remover(new Hotel("Vila Selvagem", "Fortim/CE", 1400));
+        cadastro.removerTodos();
 
         ArrayList<Hotel> hoteis = cadastro.obterTodos();
 //        hoteis.set(3, new Hotel("Teste", "Teste", 0));
