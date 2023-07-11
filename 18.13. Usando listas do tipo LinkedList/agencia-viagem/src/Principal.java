@@ -16,7 +16,6 @@ public class Principal {
         cadastro.adicionarNovoHotel("Mercure", "Uberlândia/MG", 400);
 
         LinkedList<Hotel> hoteis = cadastro.obterTodos();
-        hoteis.add()
         imprimirHoteis(hoteis);
     }
 
