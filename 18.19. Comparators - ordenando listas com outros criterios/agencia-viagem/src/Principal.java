@@ -17,7 +17,7 @@ public class Principal {
 
         cadastro.ordenarPorPreco();
 
-//        cadastro.ordenar();
+        cadastro.ordenar();
 
 //        Hotel[] hoteis = cadastro.obterTodosComoArray();
 //        System.out.println(Arrays.toString(hoteis));
