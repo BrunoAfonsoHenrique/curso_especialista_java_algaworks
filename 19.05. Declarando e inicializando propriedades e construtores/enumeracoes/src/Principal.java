@@ -4,7 +4,7 @@ public class Principal {
 
         Pedido pedido = new Pedido();
         pedido.setNomeCliente("Joao da Sila");
-        pedido.setStatus(StatusPedido.EMITIDO);
+        pedido.setStatus(StatusPedido.SEPARADO);
 
         System.out.println(pedido.getTempoEntregaEmHoras());
 
