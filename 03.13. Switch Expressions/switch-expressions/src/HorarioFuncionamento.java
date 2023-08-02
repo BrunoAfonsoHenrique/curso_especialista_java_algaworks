@@ -7,25 +7,27 @@ public class HorarioFuncionamento {
 
         System.out.print("Digite um dia da semana (ex: seg, ter, qua, etc): ");
         String diaSemana = entrada.nextLine();
-        String horarioFuncionamento;
+        //String horarioFuncionamento;
 
+        /*
         switch (diaSemana) {
-            case "seg":
-                horarioFuncionamento = "Fechado";
-                break;
-            case "ter":
-            case "qua":
-            case "qui":
-            case "sex":
+            case "seg" -> horarioFuncionamento = "Fechado";
+            case "ter", "qua", "qui", "sex" -> {
                 horarioFuncionamento = "08:00 às 18:00";
-                break;
-            case "sab":
-            case "dom":
+            }
+            case "sab", "dom" -> {
                 horarioFuncionamento = "08:00 às 12:00";
-                break;
-            default:
-                horarioFuncionamento = "Dia inválido";
+            }
+            default -> horarioFuncionamento = "Dia inválido";
         }
+        */
+
+        String horarioFuncionamento = switch (diaSemana) {
+            case "seg" -> "Fechado";
+            case "ter", "qua", "qui", "sex" -> "08:00 às 18:00";
+            case "sab", "dom" -> "08:00 às 12:00";
+            default -> "Dia inválido";
+        };
 
         System.out.printf("Horário de funcionamento: %s%n", horarioFuncionamento);
     }
