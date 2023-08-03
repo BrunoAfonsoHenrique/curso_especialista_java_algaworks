@@ -33,5 +33,4 @@ public class ApostaMegaSena {
 
         System.out.printf("Números escolhidos: %s%n", numerosEscolhidos);
     }
-
 }
