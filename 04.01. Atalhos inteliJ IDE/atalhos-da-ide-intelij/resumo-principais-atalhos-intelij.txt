@@ -1,0 +1,55 @@
+IDE
+
+*InteliJ (Mais usada)
+
+Caminho:
+File > Setings > plugins (instalar plugins)
+-------------------------------------------------------------------------------------------------------
+
+Atalhos Gerais
+Alt + Ctrol + L identação/ formata too código aberto no editor
+Ctrl + Alt + O otimizar as importações 
+Ctrl + Shift + T Criar teste no inteliJ
+Ctrl + Shift + F8 limpar todos os breackpoints
+Ctrol + Alt + S abrir configurações da IDE
+Shift + enter vai para a próxima linha
+Ctrol + Shift + i vai para maisculo e monisculo qualquer palavra
+Alt + Shift clica em varios lugares com o mouse para escrever em ao mesmo tempo em pontos diferentes
+--------------------------------------------------------------------------------------------------------
+
+Pesquisar
+Ctrol + F pesquisar em uma classe
+Ctrol + R pesquisa e substituição
+Ctrol + Shift + F pesquisa no projeto inteiro
+duplo + Shift pesquisar em todos os lugares (clilcar duas vezes no shift)
+Ctrol + Shift + F pesquisa por algum arquivo dentro do projeto
+--------------------------------------------------------------------------------------------------------
+
+Renomear
+Shift + F6
+--------------------------------------------------------------------
+
+Deletar
+Ctrol + Y apagar linha onde esta o cursor
+--------------------------------------------------------------------
+
+Duplicar 
+Ctrol + D duplicar linha onde esta o cursor
+---------------------------------------------------------------------
+
+Mover linha
+duplo + Shift + Seta para cima/baixo (Mover a linha)
+---------------------------------------------------------------------
+
+Extrair
+Ctrol + Alt + M Extrair métodos
+Ctrl + Alt + C Extrair valor para uma constante
+-----------------------------------------------------------------------------
+
+Executar/debugar Programa
+Shift + F10 Executar
+Shift + F09 debugar
+
+
+
+
