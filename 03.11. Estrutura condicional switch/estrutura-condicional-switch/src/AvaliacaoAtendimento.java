@@ -43,5 +43,4 @@ public class AvaliacaoAtendimento {
 
         System.out.printf("Sua nota foi: %d - %s%n", nota, descricaoNota);
     }
-
 }
