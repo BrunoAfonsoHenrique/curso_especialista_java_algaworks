@@ -24,5 +24,6 @@ public class OperadoresIgualdadeNegacao {
         String nome2 = "Bruno";
         boolean nomesIguais = nome1.equals(nome2);
         System.out.printf("Nomes iguais: %s%n", nomesIguais);
+
     }
 }
