@@ -14,7 +14,6 @@ public class ProgramaAnaBissexto {
         } else {
             System.out.println("Não é ano bissexto");
         }
-
         entrada.close();
     }
 }
