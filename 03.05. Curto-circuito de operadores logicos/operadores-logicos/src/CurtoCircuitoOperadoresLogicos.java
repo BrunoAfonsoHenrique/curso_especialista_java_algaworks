@@ -11,6 +11,6 @@ public class CurtoCircuitoOperadoresLogicos {
 
         System.out.println(resultado);
         System.out.println(y);
-        
+
     }
 }
