@@ -27,5 +27,4 @@ public class ControlePesoAeronave {
         System.out.printf("Situação da aeronave: %s%n",
                 pesoTotalPassageiros > pesoMaximo ? "peso excedido" : "liberada");
     }
-
 }
