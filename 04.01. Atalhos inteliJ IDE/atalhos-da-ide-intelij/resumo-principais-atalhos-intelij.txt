@@ -1,54 +1,59 @@
 IDE
-
 *InteliJ (Mais usada)
 
+-----------------------
 Caminho:
 File > Setings > plugins (instalar plugins)
--------------------------------------------------------------------------------------------------------
+-----------------------------------------------
 
 Atalhos Gerais
-Alt + Ctrol + L identação/ formata too código aberto no editor
+Alt + Ctrl + L indentação/ formata too código aberto no editor
 Ctrl + Alt + O otimizar as importações 
-Ctrl + Shift + T Criar teste no inteliJ
+Ctrl + Shift + T Criar teste no InteliJ
 Ctrl + Shift + F8 limpar todos os breackpoints
-Ctrol + Alt + S abrir configurações da IDE
-Shift + enter vai para a próxima linha
-Ctrol + Shift + i vai para maisculo e monisculo qualquer palavra
-Alt + Shift clica em varios lugares com o mouse para escrever em ao mesmo tempo em pontos diferentes
---------------------------------------------------------------------------------------------------------
+Ctrl + Alt + S abrir configurações da IDE
+Shift + ENTER vai para a próxima linha
+Ctrl + Shift + I vai para maiúsculo e minúsculo qualquer palavra
+Alt + Shift clica em vários lugares com o mouse para escrever em ao mesmo tempo em pontos diferentes
 
+---------------------------------------------------------------------------------
 Pesquisar
-Ctrol + F pesquisar em uma classe
-Ctrol + R pesquisa e substituição
-Ctrol + Shift + F pesquisa no projeto inteiro
-duplo + Shift pesquisar em todos os lugares (clilcar duas vezes no shift)
-Ctrol + Shift + F pesquisa por algum arquivo dentro do projeto
---------------------------------------------------------------------------------------------------------
+Ctrl + F pesquisar em uma classe
+Ctrl + R pesquisa e substituição
+Ctrl + Shift + F pesquisa no projeto inteiro
+duplo + Shift pesquisar em todos os lugares (clicar duas vezes no shift)
+Ctrl + Shift + F pesquisa por algum arquivo dentro do projeto
+--------------------------------------------------------------------------------
 
 Renomear
 Shift + F6
---------------------------------------------------------------------
+
+-------------------------------------------------------------
 
 Deletar
-Ctrol + Y apagar linha onde esta o cursor
---------------------------------------------------------------------
+Ctrl + Y apagar linha onde está o cursor
+
+----------------------------------------------------------
 
 Duplicar 
-Ctrol + D duplicar linha onde esta o cursor
----------------------------------------------------------------------
+Ctrl + D duplicar linha onde está o cursor
+
+-------------------------------------------------------------
 
 Mover linha
-duplo + Shift + Seta para cima/baixo (Mover a linha)
----------------------------------------------------------------------
+Ctrl + Shift + Seta para cima/baixo (Mover a linha)
+
+-----------------------------------------------------------------------
 
 Extrair
-Ctrol + Alt + M Extrair métodos
+Ctrl + Alt + M Extrair métodos
 Ctrl + Alt + C Extrair valor para uma constante
------------------------------------------------------------------------------
+
+--------------------------------------------------------------------
 
 Executar/debugar Programa
 Shift + F10 Executar
-Shift + F09 debugar
+Shift + F09 Debugar
 
 
 
