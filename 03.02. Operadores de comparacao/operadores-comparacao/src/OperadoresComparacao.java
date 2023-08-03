@@ -12,5 +12,6 @@ public class OperadoresComparacao {
         //boolean cargaLiberada = pesoProdutos <= limitePesoCaminhao;
         boolean cargaLiberada = limitePesoCaminhao >= pesoProdutos;
         System.out.printf("Carga Liberada: %b%n", cargaLiberada);
+        
     }
 }
