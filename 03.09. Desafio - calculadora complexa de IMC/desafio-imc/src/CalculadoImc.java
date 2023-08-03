@@ -30,7 +30,5 @@ public class CalculadoImc {
         } else {
             System.out.println("Obeso");
         }
-
-
     }
 }
