@@ -17,7 +17,7 @@ public class CalculadoraImpostosExemplo {
 
         double taxaImpostos = tipoNotaFiscal == 'S' ? 0.16 : 0.35;
         double valorImpostos = totalFaturado * taxaImpostos;
-        
+
         System.out.printf("Total faturado: R$%.2f%n", totalFaturado);
         System.out.printf("Valor dos impostos: R$%.2f%n", valorImpostos);
     }
