@@ -20,5 +20,6 @@ public class ExameCortisol {
         System.out.printf("Cortisol anormal: %b%n", resultadoAnormal);
 
         entrada.close();
+        
     }
 }
