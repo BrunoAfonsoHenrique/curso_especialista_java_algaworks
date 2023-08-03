@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class DesafioFor {
 
+    private static int numero;
+
     public static void main(String[] args) {
 
         Scanner entrada = new Scanner(System.in);
@@ -14,12 +16,14 @@ public class DesafioFor {
 
             while (numero % 2 != 0) {
                 System.out.printf("Numero %d é invalido. Digite apenas numeros pares.%n", numero);
-                System.out.print("Digite o numero: ");
+
+                System.out.print("Digite o numero : ");
                 numero = entrada.nextInt();
             }
-
             somaNumeros += numero;
         }
+
+        System.out.printf("Soma dos numeros: %d%n", somaNumeros);
         System.out.printf("Soma dos numeros: %d%n", somaNumeros);
 
         /*
