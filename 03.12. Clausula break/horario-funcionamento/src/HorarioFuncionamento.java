@@ -29,5 +29,4 @@ public class HorarioFuncionamento {
 
         System.out.printf("Horário de funcionamento: %s%n", horarioFuncionamento);
     }
-
 }
