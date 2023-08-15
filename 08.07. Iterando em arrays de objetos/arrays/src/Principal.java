@@ -16,5 +16,18 @@ public class Principal {
 
         turmaB.alunos[1] = aluno1;
 
+//        for (int i = 0; i < turmaB.alunos.length; i++) {
+//            Aluno aluno = turmaB.alunos[i];
+//            if (aluno != null) {
+//                System.out.printf("%d -> %s (%d anos)%n",
+//                        i, aluno.nome, aluno.idade);
+//            } else {
+//                System.out.printf("%d -> vago%n", i);
+//            }
+//
+//        }
+
+        turmaB.imprimirListaDeAlunos();
+
     }
 }
