@@ -13,7 +13,7 @@ Ctrl + Shift + T Criar teste no InteliJ
 Ctrl + Shift + F8 limpar todos os breackpoints
 Ctrl + Alt + S abrir configurações da IDE
 Shift + ENTER vai para a próxima linha
-Ctrl + Shift + I vai para maiúsculo e minúsculo qualquer palavra
+Ctrl + Shift + U vai para maiúsculo e minúsculo qualquer palavra
 Alt + Shift clica em vários lugares com o mouse para escrever em ao mesmo tempo em pontos diferentes
 
 ---------------------------------------------------------------------------------
