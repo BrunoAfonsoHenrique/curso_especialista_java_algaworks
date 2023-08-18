@@ -8,15 +8,17 @@ public class Produto {
     int quantidadeEstoque;
 
     Produto() {
-        this.nome = "Sem nome";
-        this.quantidadeEstoque = QUANTIDADE_ESTOQUE_INCIAL;
+        this("Sem nome");
+//        this.nome = "Sem nome";
+//        this.quantidadeEstoque = QUANTIDADE_ESTOQUE_INCIAL;
     }
 
     Produto(String nome) {
-        Objects.requireNonNull(nome, "Nome é obrigatório");
-
-        this.nome = nome;
-        this.quantidadeEstoque = QUANTIDADE_ESTOQUE_INCIAL;
+        this(nome, QUANTIDADE_ESTOQUE_INCIAL);
+//        Objects.requireNonNull(nome, "Nome é obrigatório");
+//
+//        this.nome = nome;
+//        this.quantidadeEstoque = QUANTIDADE_ESTOQUE_INCIAL;
     }
 
     Produto(String nome, int estoqueInicial) {
