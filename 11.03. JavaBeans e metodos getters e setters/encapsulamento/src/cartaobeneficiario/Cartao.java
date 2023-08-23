@@ -9,8 +9,11 @@ public class Cartao implements Serializable {
 
     private String titular;
     private double saldo;
-
     private Boolean ativo;
+
+    public Cartao() {
+
+    }
 
     public Cartao(String titular) {
         this.titular = titular;
@@ -20,21 +23,18 @@ public class Cartao implements Serializable {
         return titular;
     }
 
-    public double getSaldo() {
-        return saldo;
-    }
-
     public void setTitular(String titular) {
         this.titular = titular;
     }
 
-    public Boolean isAtivo() { // alternativa que pode usar
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public Boolean isAtivo() {
         return ativo;
     }
 
-    public void setAtivo(Boolean ativo) {
-        this.ativo = ativo;
-    }
 
     public void debitar(double valorDebito) {
         if (getSaldo() < valorDebito) {
