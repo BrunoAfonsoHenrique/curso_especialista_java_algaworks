@@ -37,14 +37,16 @@ public class Conta {
         return saldo;
     }
 
+    protected void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+
     public void sacar(double valorSaque) {
         if (valorSaque <= 0) {
             throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
         }
 
-        if (getSaldo() < valorSaque) {
-            throw new RuntimeException("Saldo insuficiente para saque");
-        }
+        validarSaldoParaSaque(valorSaque);
 
         saldo -= valorSaque;
     }
@@ -63,6 +65,12 @@ public class Conta {
         System.out.printf("Conta: %d%n", getNumero());
         System.out.printf("Titular: %s%n", getTitular().getNome());
         System.out.printf("Saldo: %.2f%n", getSaldo());
+    }
+
+    protected void validarSaldoParaSaque(double valorSaque) {
+        if (getSaldo() < valorSaque) {
+            throw new RuntimeException("Saldo insuficiente para saque");
+        }
     }
 
 }
