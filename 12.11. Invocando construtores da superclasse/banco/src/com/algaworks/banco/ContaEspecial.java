@@ -5,6 +5,9 @@ public class ContaEspecial extends ContaInvestimento {
     private double tarifaMensal;
     private double limiteChequeEspecial;
 
+    public ContaEspecial() {
+    }
+
     public double getTarifaMensal() {
         return tarifaMensal;
     }
