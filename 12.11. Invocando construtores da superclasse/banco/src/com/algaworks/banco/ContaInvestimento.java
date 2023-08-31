@@ -1,11 +1,11 @@
 package com.algaworks.banco;
 
-public class ContaInvestimento extends Conta{
+public class ContaInvestimento extends Conta {
 
     private double valorTotalRendimentos;
 
     public ContaInvestimento() {
-        super();
+        super(0);
     }
 
     public double getValorTotalRendimentos() {
@@ -16,7 +16,6 @@ public class ContaInvestimento extends Conta{
         double valorRendimentos = getSaldo() * percentualJuros / 100;
         this.valorTotalRendimentos += valorRendimentos;
         depositar(valorRendimentos);
-
     }
 
 }

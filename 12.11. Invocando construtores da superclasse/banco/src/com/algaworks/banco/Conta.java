@@ -1,17 +1,15 @@
 package com.algaworks.banco;
 
 public class Conta {
-    private Titular titular; // Composição
 
+    private Titular titular;
     private int agencia;
-
     private int numero;
-
     private double saldo;
 
-    public Conta() {
-        this(0);
-    }
+//    public Conta() {
+//        this(0);
+//    }
 
     public Conta(double saldoInicial) {
         this.saldo = saldoInicial;
@@ -49,6 +47,12 @@ public class Conta {
         this.saldo = saldo;
     }
 
+    protected void validarSaldoParaSaque(double valorSaque) {
+        if (getSaldo() < valorSaque) {
+            throw new RuntimeException("Saldo insuficiente para saque");
+        }
+    }
+
     public void sacar(double valorSaque) {
         if (valorSaque <= 0) {
             throw new IllegalArgumentException("Valor do saque deve ser maior que 0");
@@ -73,12 +77,6 @@ public class Conta {
         System.out.printf("Conta: %d%n", getNumero());
         System.out.printf("Titular: %s%n", getTitular().getNome());
         System.out.printf("Saldo: %.2f%n", getSaldo());
-    }
-
-    protected void validarSaldoParaSaque(double valorSaque) {
-        if (getSaldo() < valorSaque) {
-            throw new RuntimeException("Saldo insuficiente para saque");
-        }
     }
 
 }
