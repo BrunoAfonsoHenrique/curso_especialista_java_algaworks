@@ -4,7 +4,13 @@ public class Anonimizacao {
         String html = "<a href=\"mailto:joao@gmail.com\">\n   joao@gmail.com  </a>\n" +
                 "<a>\n   abc@algaworks.com</a><a>xyz@algaworks.com</a>" +
                 "<strong>maria@algaworks.com</strong>";
-        
+
+
+        String regex = "[\\w.-]+@[a-z\\d.-]+\\.[a-z]{2,3}";
+
+        //String novoHtml = html.replaceFirst(regex,"email@anonimo");
+        String novoHtml = html.replaceAll(regex,"email@anonimo");
+        System.out.println(novoHtml);
     }
 
 }
